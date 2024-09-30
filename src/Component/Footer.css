@@ -1,0 +1,29 @@
+footer {
+    background-color: #393E46; 
+    color: #fff; 
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  footer p:hover {
+    color: #929AAB; 
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      padding: 20px 0;
+    }
+  
+    footer p {
+      font-size: 14px;
+    }
+  }
