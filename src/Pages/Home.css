@@ -1,17 +1,18 @@
 .welcome-section {
-  background-image: url('../assets/background.jpg');
+  background-image: url('../assets/background.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
-  color: #393E46;
+  color: #929AAB;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .category {
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 25px 0;
+  padding-bottom: 0%;
   text-align: center;
   color: #393E46;
   overflow-x: auto;
@@ -31,9 +32,10 @@
   text-align: center;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px;
   flex: 0 0 auto; 
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer; 
 }
 
 .category-image {
@@ -42,6 +44,16 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-image {
+  transform: scale(1.1); 
+}
+
+.category-item:hover {
+  transform: scale(1.05); 
+  border: none; 
 }
 
 .category-item p {
@@ -49,7 +61,7 @@
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .category-container {
     flex-wrap: nowrap; 
     overflow-x: scroll; 
@@ -67,7 +79,7 @@
   background-color: #F7F7F7;
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  padding: 25px 0;
   text-align: center;
   color: #393E46;
 }
@@ -108,12 +120,54 @@
 }
 
 .brand {
-  background-color: #929AAB;
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0;
+  background-color: #393E46;
   text-align: center;
-  color: #fff;
+  color: #F7F7F7;
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+
+.brand-carousel {
+  position: relative;
+  margin-top: 0;
+}
+
+.brand-banner {
+  width: 100%;
+  height: 80vh; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.brand-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.brand-buttons button {
+  width: 30px;
+  height: 5px;
+  background-color: #393E46;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.brand-buttons .active {
+  background-color: #F7F7F7;
 }
 
 h1{

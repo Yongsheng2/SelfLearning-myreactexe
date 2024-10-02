@@ -1,52 +1,93 @@
 .navbar {
-  background-color: transparent !important;
-  position: sticky !important;
+  background-color: transparent !important; 
+  position: fixed; 
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-brand {
-  color: #393E46 !important;
-  font-size: 24px;
+  color: #929AAB !important;
+  font-size: 25px;
   font-weight: bold;
 }
 
-.navbar-toggler {
-  border-color: transparent !important;
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.nav-item {
+  margin-left: 20px; 
 }
 
 .nav-link {
   color: #929AAB !important;
   margin-right: 20px;
   font-size: 18px;
-  font-weight: bold;
   transition: color 0.3s ease;
   align-items: center;
 }
 
 .nav-link:hover {
-  color: #393E46 !important;
+  color: #f7f7f7 !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important; 
+  width: 30px;
+  height: 3px;
+  background-color: #929AAB; 
+  border-radius: 5px;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #929AAB; 
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -10px;
+}
+
+.navbar-toggler-icon::after {
+  top: 10px;
 }
 
 @media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(57, 62, 70, 0.9); 
+    border-radius: 5px;
+  }
+  
   .nav {
-    display: none;
+    display: flex !important;
+    flex-direction: column;
+  }
 
-    .navbar-toggler {
-      display: block !important;
-    }
+  .nav-link {
+    color: #f7f7f7 !important;
+    padding: 10px 0;
+    padding-left: 25px;
+  }
 
-    .navbar-collapse.show .nav {
-      display: flex !important;
-      flex-direction: column;
-      background-color: #393E46;
-      padding: 20px;
-    }
-
-    .nav-link {
-      color: #fff !important;
-      padding: 10px 0;
-    }
+  .nav-link:hover {
+    color: #929AAB !important;
   }
 }
