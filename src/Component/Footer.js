@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="py-3">
       <Container className="text-center">
-        <p>&copy; {year} My Web. All rights reserved.</p>
+        <p>&copy; {year} Loft. All rights reserved.</p>
       </Container>
     </footer>
   );

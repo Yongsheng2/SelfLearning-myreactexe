@@ -1,4 +1,4 @@
-.first-section {
+.welcome-section {
   background-image: url('../assets/background.jpg');
   background-size: cover;
   background-position: center;
@@ -8,7 +8,62 @@
   justify-content: left;
 }
 
-.second-section {
+.category {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  text-align: center;
+  color: #393E46;
+  overflow-x: auto;
+}
+
+.category-container {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding-left: 20px; 
+  padding-right: 20px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.category-item {
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  flex: 0 0 auto; 
+}
+
+.category-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.category-item p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .category-container {
+    flex-wrap: nowrap; 
+    overflow-x: scroll; 
+    justify-content: flex-start; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .category-item {
+    margin-right: 15px;
+  }
+}
+
+.top-product {
   background-color: #F7F7F7;
   background-size: cover;
   background-position: center;
@@ -52,7 +107,7 @@
   
 }
 
-.third-section {
+.brand {
   background-color: #929AAB;
   background-size: cover;
   background-position: center;
