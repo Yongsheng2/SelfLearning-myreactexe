@@ -1,11 +1,14 @@
 .navbar {
   background-color: transparent !important; 
-  position: fixed; 
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; 
-  display: flex;
-  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.4s ease-in-out; 
+}
+
+.navbar-scroll {
+  background-color: #393e46 !important; 
 }
 
 .navbar-brand {
@@ -70,7 +73,7 @@
   top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .navbar-collapse {
     background-color: rgba(57, 62, 70, 0.9); 
     border-radius: 5px;

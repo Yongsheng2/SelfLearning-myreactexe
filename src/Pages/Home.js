@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import { Card, Container, Row, Col, Carousel } from 'react-bootstrap';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import { useInView } from 'react-intersection-observer';
 
 import office from '../assets/office-category.jpg';
@@ -24,14 +25,14 @@ const Home = (props) => {
   const [ref2, inView2] = useInView({ triggerOnce: true });
   const [ref3, inView3] = useInView({ triggerOnce: true });
 
-  const brandImages = [firstBrand, secBrand, thirdBrand]; 
-  const [currentBrandIndex, setCurrentBrandIndex] = useState(0); 
+  const brandImages = [firstBrand, secBrand, thirdBrand];
+  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
 
   useEffect(() => {
     const autoSlide = setInterval(() => {
       setCurrentBrandIndex((prevIndex) => (prevIndex + 1) % brandImages.length);
     }, 3000);
-    return () => clearInterval(autoSlide); 
+    return () => clearInterval(autoSlide);
   }, [brandImages.length]);
 
   const selectBrand = (index) => {

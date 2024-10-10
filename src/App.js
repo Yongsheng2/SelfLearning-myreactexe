@@ -6,19 +6,20 @@ import NavigationBar from './Component/Navbar';
 import Footer from './Component/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
-import Contact from './Pages/Contact';
+import Menu from './Pages/Product';
+import Product from './Pages/Product';
 
 function App() {
   const username = 'Yong Sheng';
 
   return (
     <div className="App">
-      <Router><NavigationBar/>
+      <Router><NavigationBar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home  username={username} />} /> 
-            <Route path="/about" element={<About />} /> 
-            <Route path="/contact" element={<Contact />} /> 
+            <Route path="/" element={<Home username={username} />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
         <Footer /></Router>
